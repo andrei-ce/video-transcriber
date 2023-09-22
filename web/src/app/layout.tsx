@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from '@/components/theme-provider'
 import { ModeToggle } from '@/components/ui/mode-toggle'
 
 interface RootLayoutProps {
@@ -21,10 +21,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <head />
         <body className={inter.className}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider  attribute='class' defaultTheme="system" enableSystem>
             <>
-            <nav className='flex justify-end p-2'><ModeToggle/></nav>
-            {children}
+              <nav className="flex justify-end p-2">
+                <ModeToggle />
+              </nav>
+              {children}
             </>
           </ThemeProvider>
         </body>
